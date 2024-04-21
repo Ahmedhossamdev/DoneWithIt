@@ -13,7 +13,6 @@ import colors from '../config/colors';
 import defaultStyles from '../config/styles';
 import AppText from './AppText';
 import Screen from './Screen';
-import { Picker } from '@react-native-picker/picker';
 import PickerItem from './PickerItem';
 
 function AppPicker({ icon, placeholder, items, onSelectItem, selectedItem }) {
@@ -31,7 +30,12 @@ function AppPicker({ icon, placeholder, items, onSelectItem, selectedItem }) {
 							style={styles.icon}
 						/>
 					)}
-					<AppText style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</AppText>
+					{selectedItem ? (
+						<AppText style={styles.text}>{selectedItem.label}</AppText>
+					) : (
+						<AppText style={styles.placeholder}>{placeholder}</AppText>
+					)}
+
 					<MaterialCommunityIcons
 						name="chevron-down"
 						size={20}
@@ -77,6 +81,11 @@ const styles = StyleSheet.create({
 	textInput: defaultStyles.text,
 
 	text: {
+		flex: 1,
+	},
+
+	placeholder: {
+		color: defaultStyles.colors.medium,
 		flex: 1,
 	},
 });

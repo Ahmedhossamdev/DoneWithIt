@@ -15,7 +15,11 @@ function AppTextInput({ icon, ...otherProps }) {
 					style={styles.icon}
 				/>
 			)}
-			<TextInput style={styles.textInput} {...otherProps} />
+			<TextInput
+				placeholderTextColor={defaultStyles.colors.medium}
+				style={defaultStyles.text}
+				{...otherProps}
+			/>
 		</View>
 	);
 }
@@ -33,8 +37,8 @@ const styles = StyleSheet.create({
 		marginRight: 10,
 	},
 	textInput: {
-		...defaultStyles.text,
 		flex: 1,
+		...defaultStyles.text,
 	},
 });
 
