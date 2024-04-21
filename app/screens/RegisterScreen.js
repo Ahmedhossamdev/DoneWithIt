@@ -58,9 +58,7 @@ function RegisterScreen(props) {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
 		padding: 10,
-		backgroundColor: 'white',
 	},
 	logo: {
 		width: 80,
@@ -68,17 +66,6 @@ const styles = StyleSheet.create({
 		alignSelf: 'center',
 		marginTop: 50,
 		marginBottom: 20,
-	},
-	input: {
-		margin: 10,
-		height: 40,
-		borderWidth: 1,
-	},
-	button: {
-		backgroundColor: 'blue',
-		color: 'white',
-		padding: 15,
-		margin: 10,
 	},
 });
 
