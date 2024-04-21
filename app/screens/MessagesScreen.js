@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { FlatList, Platform, StyleSheet, Text, View } from 'react-native';
-import ListItem from '../components/ListItem';
+import ListItem from '../components/lists/ListItem';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
-import Spreator from '../components/Separator';
+import Spreator from '../components/lists/Separator';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
+import ListItemDeleteAction from '../components/lists/ListItemDeleteAction';
 // import { FlatList } from 'react-native-gesture-handler';
 
 const initialMessages = [
